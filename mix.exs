@@ -23,6 +23,7 @@ defmodule Yakima.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.13"},
+      {:poison, "~> 3.1"},
       {:ecto, "~> 2.1"},
       {:postgrex, "~> 0.13"},
     ]
