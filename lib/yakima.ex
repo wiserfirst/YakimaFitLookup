@@ -1,0 +1,2 @@
+defmodule Yakima do
+end
