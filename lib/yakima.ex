@@ -12,7 +12,16 @@ defmodule Yakima do
 
   def get_vehicles do
     for i <- 1..100000 do
-      url = Path.join([@base_url, "GetVehicles", "2017", Integer.to_string(i)])
+      url = Path.join([@base_url, "GetVehicles", Integer.to_string(i), "14824"])
+      url
+      |> HTTPoison.get!
+      |> save_response
+    end
+  end
+
+  def get_list_of_fits do
+    for i <- 1..3000 do
+      url = Path.join([@base_url, "GetListOfFits", Integer.to_string(i)])
       url
       |> HTTPoison.get!
       |> save_response
